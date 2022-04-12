@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Регистрация</title>
+
+<body>
+    <form novalidate>
+        <h1 class="header">ANSWER</h1>
+        <p><b> Мой аккаунт</b> </p>
+        <form class="container">
+            <div class="container_radiobutton">
+                <input type="radio" id="man" name="sex">
+                <label for="man">Мужчина</label>
+                <input type="radio" id="woman" name="sex">
+                <label for="woman">Женщина</label>
+            </div>
+            <div class="container_form">
+                <label for="name"><b>Укажите своё имя</b></label>
+                <input type="text" placeholder="Имя" name="name" id="name" required>
+                <div id="errorMessageName"></div>
+                <label for="surname"><b>Укажите свою фамилию</b></label>
+                <input type="text" placeholder="Фамилия" name="surname" required>
+                <label for="Telephone"><b>Укажите свoй номер телефона*</b></label>
+                <input type="text" id="phone" placeholder="+380......... " max=13 min=1
+                    pattern="^+380\d{3}\d{2}\d{2}\d{2}$" required>
+                <label for="email"><b>Укажите свой е-mail*</b></label>
+                <input type="text" placeholder="Email" name="email" id="email" required>
+                <div id="errorMessageemail"></div>
+                <label for="psw"><b>Введите пароль*</b></label>
+                <input type="password" placeholder="Пароль" name="psw" id="psw" required>
+                <p class="note">минимально 8 символов, включая одну заглавную букву </p>
+                <div id="errorMessagepsw"></div>
+                <label for="psw-repeat"><b>Повторите пароль*</b></label>
+                <input type="password" placeholder="Повтор пароля" name="psw-repeat" required>
+            </div>
+            <div class="container__checkbox">
+                <div><input type="checkbox" id="shopRules" name="rule">
+                    <label for="shopRules">Соглашаюсь <a href="#"> Правилами магазина* </a></label> </br></div>
+                <div><input type="checkbox" id="commercemail" name="rule">
+                    <label for="commercemail">Хочу получать коммерческие предложения магазина ANSWEAR.ua на указанный
+                        выше email.
+                        <a href="#">ПОДРОБНЕЕ</a></label> </br></div>
+                <div><input type="checkbox" id="commercetel" name="rule">
+                    <label for="commercetel">Хочу получать предложения от ANSWEAR.ua на номер телефона, указанный выше.
+                        <a href="#"> ПОДРОБНЕЕ</a></label> </br></div>
+            </div>
+            <p class="personalData">Администратором персональных данных является Answear S.A. с офисом,
+                зарегистрированным в г. Кракове, 31-564, ул. Aleja Pokoju 18, под контролем окружного суда в г. Кракове,
+                XI Финансового отдела Национального судебного регистра, KRS № 0000816066.</p>
+            <div class="register-btn">
+                <button type="submit" id="postButton" onclick="checkAll()">Создать Аккаунт</button></br>
+                <button type="button" class="btn" id="back">Вернуться</button>
+            </div>
+            <div class="container_signin">
+                <p>У меня есть аккаунт <a href="#">Войти</a></p>
+            </div>
+            <div id="errorsInfo"></div>
+        </form>
+        <script src="./main.js"></script>
+</body>
+
+</html>
